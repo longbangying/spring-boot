@@ -1,0 +1,16 @@
+server:
+  port: 8010
+spring:
+  rabbitmq:
+    host: 192.168.153.128
+    port: 5672
+    username: xbang
+    password: xbang
+    virtual-host: /spring-test
+    publisherConfirms: true
+    publisher-returns: true
+
+logging:
+  level:
+    com:
+      xbang: trace

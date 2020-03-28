@@ -1,0 +1,24 @@
+spring cache
+
+1.spring cache 支持 GENERIC,JCACHE,EHCACHE,HAZELCAST,INFINISPAN,COUCHBASE,REDIS,CAFFEINE,SIMPLE,NONE,详见枚举类(org.springframework.boot.autoconfigure.cache.CacheType);
+2.指定枚举类型通过spring.cache.type=redis 指定特定的缓存实现类型
+3.redis中指定缓存键值前缀通过 spring.cache.redis.key-prefix=xx,当未指定前缀时,默认会用@Cacheable中的cacheNames值作为前缀
+4.spring cache 相关的类
+    CacheManager:管理具体的缓存实现,如果缓存类型指定是redis 的话，其实现类为RedisCacheManager,指定为SIMPLE时,实现类为SimpleCacheManager
+                 指定为不同的类型时，CacheManager 注入到IOC容器中的位置也不一样,例如,指定为redis时，其在RedisCacheConfiguration配置类中注入
+    CacheInterceptor：缓存拦截器，spring cache 是通过AOP来实现的,在CacheInterceptor实现了功能的增强,如调用方法前先查缓存,方法返回之后写入缓存等操作都是在这里实现
+                具体看 invoke(MethodInvocation invocation) 方法,更多的逻辑是在其父类(CacheAspectSupport)中实现;
+    @EnableCaching:打开缓存功能,这个注解中引入了 CachingConfigurationSelector , CachingConfigurationSelector的getProxyImports中又引入了ProxyCachingConfiguration;
+                    在ProxyCachingConfiguration  中注入了CacheInterceptor;
+5.相关注解
+    @CacheConfig：该注解只能用于类级别,相当于该类缓存相关的全局配置,例如cacheNames、keyGenerator，cacheManager，cacheResolver等;
+    @Cacheable:该注解可用于类级别和方法上，
+
+
+
+
+spring 是如何代理bean的
+1.最终的实现是JdkDynamicAopProxy或CglibAopProxy,具体使用哪个代理 在DefaultAopProxyFactory 中的createAopProxy 方法实现;
+2.JdkDynamicAopProxy的代理过程
+   当调用目标方法时,首先进到 JdkDynamicAopProxy 的 invoke 方法,通过AdvisedSupport的方法getInterceptorsAndDynamicInterceptionAdvice获取到执行链(MethodInterceptor 的实现类集合,CacheInterceptor就是 MethodInterceptor 其中的一个子类)
+   再通过ReflectiveMethodInvocation 的 proceed方法执行执行 MethodInterceptor 的invoke方法

@@ -1,0 +1,27 @@
+## 多数据源配置
+spring:
+  datasource:
+    dynamic:
+      primary: master
+      datasource:
+        master:
+          username: root
+          password: Soar18786611964_
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://192.168.153.128:3306/java_db?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
+        slave:
+          username: root
+          password: Soar18786611964_
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://192.168.153.129:3306/java_db?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.xbang.mybatis.dao.entity
+
+logging:
+  level:
+    com:
+      xbang:
+        mybatis:
+          dao:
+            mapper: trace
