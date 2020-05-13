@@ -10,6 +10,6 @@ spring:
     redis:
       #namespace: xbang-session
       flush-mode: on_save
-      cleanup-cron: 0 0/2 * * ?
+      cleanup-cron: 0 0/2 * * * ?
 
 

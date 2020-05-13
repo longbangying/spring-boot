@@ -11,4 +11,5 @@ spring:
       #namespace: xbang-session
       flush-mode: on_save
       cleanup-cron: 0 0/2 * * ?
+    timeout: 100
 

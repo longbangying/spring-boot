@@ -23,6 +23,7 @@
         <module>spring-security</module>
         <module>spring-shiro</module>
         <module>multi-datasource</module>
+        <module>spring-websocket</module>
     </modules>
 
     <parent>
