@@ -9,6 +9,18 @@ spring:
     #username: root
     #password: Soar18786611964
     #driver-class-name: com.mysql.cj.jdbc.Driver
+  boot:
+    admin:
+      client:
+        instance:
+          service-url: http://localhost:8080
+          management-url:  http://localhost:8080
+        url: http://localhost:8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["health","info"]
 multi:
   datasource:
     enabled: true
@@ -24,3 +36,5 @@ multi:
         user-name: root
         password: Soar18786611964
         class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8089
