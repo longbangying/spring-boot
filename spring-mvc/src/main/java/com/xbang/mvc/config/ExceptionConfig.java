@@ -18,7 +18,6 @@ public class ExceptionConfig {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseBody
     public Result methodArgumentNotValidException(MethodArgumentNotValidException exception){
-        //log.info("exception:{}",exception);
         return BaseResult.getResult(ResultEnum.RESULT_FAIL,exception.getBindingResult().getFieldError().getDefaultMessage());
     }
 }

@@ -25,6 +25,7 @@
         <module>multi-datasource</module>
         <module>spring-websocket</module>
         <module>boot-admin</module>
+        <module>spring-db</module>
     </modules>
 
     <parent>
