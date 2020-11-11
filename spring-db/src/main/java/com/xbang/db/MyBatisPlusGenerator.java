@@ -35,7 +35,7 @@ public class MyBatisPlusGenerator {
         autoGenerator.setGlobalConfig(globalConfig);
         //数据源配置
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
-        dataSourceConfig.setUrl("jdbc:mysql://47.104.171.254:3306/java_db?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false");
+        dataSourceConfig.setUrl("jdbc:mysql://47.104.171.254:3306/mall?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false");
         dataSourceConfig.setUsername("java_opr");
         dataSourceConfig.setPassword("Soar18786611964!");
         dataSourceConfig.setDriverName("com.mysql.jdbc.Driver");
@@ -81,7 +81,7 @@ public class MyBatisPlusGenerator {
         strategyConfig.setRestControllerStyle(true);
         strategyConfig.setControllerMappingHyphenStyle(true);
         //表名
-        strategyConfig.setInclude("t_user_info");
+        strategyConfig.setInclude("pms_product");
         autoGenerator.setStrategy(strategyConfig);
         autoGenerator.setTemplateEngine(new FreemarkerTemplateEngine());
         autoGenerator.execute();

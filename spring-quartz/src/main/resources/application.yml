@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: ali
+  quartz:
+    job-store-type: memory
+    schedulerName: test-quertz
+    autoStartup: true
+    startupDelay: 1

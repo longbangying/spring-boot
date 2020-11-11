@@ -14,4 +14,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @MapperScan("com.xbang.db.dao.mapper")
 public class DbConfig {
+
+
 }

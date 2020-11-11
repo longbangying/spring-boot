@@ -26,6 +26,9 @@
         <module>spring-websocket</module>
         <module>boot-admin</module>
         <module>spring-db</module>
+        <module>spring-quartz</module>
+        <module>spring-redis</module>
+        <module>spring-cache</module>
     </modules>
 
     <parent>
@@ -203,6 +206,19 @@
             <dependency>
                 <groupId>com.xbang</groupId>
                 <artifactId>spring-mybatis</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.xbang</groupId>
+                <artifactId>spring-db</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xbang</groupId>
+                <artifactId>spring-redis</artifactId>
                 <version>1.0.0</version>
             </dependency>
 
