@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+#指定缓存实现方式
+spring:
+  cache:
+    type: redis
+    redis:
+      #缓存键值的前缀
+      key-prefix: spring-cache-
+      #缓存有效期为10秒
+      time-to-live: 10000
+  redis:
+    host: 47.104.171.254
+    port: 6379
+    password: redis
+    database: 6
+    jedis:
+      pool:
+        #连接池最大连接数(使用负数表示没有限制),默认8
+        max-active: 100
+    #lettuce:
+    #  pool:
+    #   #连接池最大连接数(使用负数表示没有限制),默认8
+    #   max-active: 100

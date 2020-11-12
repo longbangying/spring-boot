@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-commons" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/multi-datasource" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cache" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cache-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-datasource-mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-db" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-elasticsearch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mvc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-quartz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-rabbitmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-rabbitmq/rabbitmq-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-rabbitmq/rabbitmq-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-security" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-security/authserver-memory" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-session" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-shiro" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-websocket" charset="UTF-8" />
+  </component>
+</project>

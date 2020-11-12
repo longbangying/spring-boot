@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xbang.mybatis.mapper.UserInfoMapper">
+
+    <resultMap id="resultMap" type="com.xbang.mybatis.entity.UserFullInfo">
+        <result column="user_name" property="userName" />
+        <collection property="roleList" ofType="com.xbang.mybatis.entity.RoleInfo">
+            <result column="role_id" property="roleId"/>
+            <result column="role_name" property="roleName"/>
+            <result column="role_code" property="roleCode"/>
+        </collection>
+    </resultMap>
+
+
+    <select id="testCollection" resultMap="resultMap">
+      select t.user_name,t3.role_id,t3.role_name,t3.role_code from t_user_info t left JOIN t_role_user_info t1 on t.id = t1.user_id left join t_role_info t3 on t1.role_id = t3.role_id
+    </select>
+
+    <select id="queryRoleInfo" resultType="com.xbang.mybatis.entity.RoleInfo">
+        select role_name "roleName", role_id "roleId",role_code "roleCode" from t_role_info
+    </select>
+</mapper>

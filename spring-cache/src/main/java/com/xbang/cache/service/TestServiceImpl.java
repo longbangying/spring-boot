@@ -30,6 +30,11 @@ public class TestServiceImpl implements TestService {
     public UserInfo queryUserInfoByName(String userName) {
         return iUserInfoService.lambdaQuery().eq(UserInfo::getUserName,userName).one();
     }
+
+    /**
+     * 更新成功后根据缓存名称+ key 去清除相关的缓存
+     * @param userInfo
+     */
     @CacheEvict(value = {"queryUserInfo","queryUserInfoByName"},key = "#userInfo.id")
     @Override
     public void updateUserInfo(UserInfo userInfo) {

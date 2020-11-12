@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    master:
+      url: jdbc:mysql://47.104.171.254:3306/security-demo?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
+      user-name: root
+      password: Soar18786611964
+      class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://47.104.171.254:3306/security-demo?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
+    #username: root
+    #password: Soar18786611964
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+  boot:
+    admin:
+      client:
+        instance:
+          service-url: http://localhost:8080
+          management-url:  http://localhost:8080
+        url: http://localhost:8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["health","info"]
+multi:
+  datasource:
+    enabled: true
+    key: master
+    datasource:
+      master:
+        url: jdbc:mysql://47.104.171.254:3306/security-demo?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
+        user-name: root
+        password: Soar18786611964
+        class-name: com.mysql.cj.jdbc.Driver
+      slave:
+        url: jdbc:mysql://47.104.171.254:3306/mysql-demo?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
+        user-name: root
+        password: Soar18786611964
+        class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8089

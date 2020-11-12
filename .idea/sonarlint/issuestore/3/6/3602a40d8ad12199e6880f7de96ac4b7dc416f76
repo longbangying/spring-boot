@@ -1,0 +1,3 @@
+
+¶%squid:RedundantThrowsDeclarationCheck)"yRemove the declaration of thrown exception 'org.apache.shiro.authc.AuthenticationException' which is a runtime exception.(¡ïË»ùÿÿÿÿ8ª¸†ê‹.
+Žsquid:S14882"pImmediately return this expression instead of assigning it to the temporary variable "simpleAuthenticationInfo".(çÃæ˜8¿š¥ê‹.

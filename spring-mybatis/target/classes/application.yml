@@ -1,0 +1,13 @@
+server:
+  port: 8050
+
+
+
+spring:
+  profiles:
+    active: ali
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.153.128:3306/java_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
+    username: root
+    password: Soar18786611964_

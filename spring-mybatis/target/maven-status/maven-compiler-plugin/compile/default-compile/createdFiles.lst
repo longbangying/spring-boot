@@ -1,0 +1,5 @@
+com\xbang\mybatis\controller\MultiDataSourceTestController.class
+com\xbang\mybatis\entity\UserInfo.class
+com\xbang\mybatis\service\TestService.class
+com\xbang\mybatis\mapper\UserInfoMapper.class
+com\xbang\mybatis\MybatisApplication.class

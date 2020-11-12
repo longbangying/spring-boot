@@ -1,0 +1,15 @@
+server:
+  port: 8060
+
+spring:
+  redis:
+    host: 47.104.171.254
+    password: redis
+  session:
+    store-type: redis
+    redis:
+      #namespace: xbang-session
+      flush-mode: on_save
+      cleanup-cron: 0 0/2 * * * ?
+
+
