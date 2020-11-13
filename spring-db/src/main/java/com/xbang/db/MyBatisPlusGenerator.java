@@ -28,14 +28,16 @@ public class MyBatisPlusGenerator {
         //配置
         GlobalConfig  globalConfig = new GlobalConfig();
         //项目路径  到父项目的POM文件那一级
-        String projectPath = System.getProperty("user.dir");
-        globalConfig.setOutputDir(projectPath+"/spring-db/src/main/java");
+        String modeName = "spring-jta";
+        String basePackage= "com.xbang.jta";
+        String projectPath = System.getProperty("user.dir") + "/" + modeName;
+        globalConfig.setOutputDir(projectPath+"/src/main/java");
         globalConfig.setAuthor("admin");
         globalConfig.setOpen(false);
         autoGenerator.setGlobalConfig(globalConfig);
         //数据源配置
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
-        dataSourceConfig.setUrl("jdbc:mysql://47.104.171.254:3306/mall?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false");
+        dataSourceConfig.setUrl("jdbc:mysql://47.104.171.254:3306/java_db?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false");
         dataSourceConfig.setUsername("java_opr");
         dataSourceConfig.setPassword("Soar18786611964!");
         dataSourceConfig.setDriverName("com.mysql.jdbc.Driver");
@@ -43,7 +45,7 @@ public class MyBatisPlusGenerator {
         autoGenerator.setDataSource(dataSourceConfig);
         //包配置
         PackageConfig packageConfig = new PackageConfig();
-        packageConfig.setParent("com.xbang.db");
+        packageConfig.setParent(basePackage);
         packageConfig.setMapper("dao.mapper");
         packageConfig.setEntity("dao.entity");
         autoGenerator.setPackageInfo(packageConfig);
@@ -61,7 +63,7 @@ public class MyBatisPlusGenerator {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 //自定义输出文件，如果entity设置了前后缀，此处主义xml的名称也会跟着变化
-                return projectPath + "/spring-db/src/main/resources/mapper"+ packageConfig.getModuleName() + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
+                return projectPath + "/src/main/resources/mapper"+ packageConfig.getModuleName() + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });
 
@@ -81,7 +83,7 @@ public class MyBatisPlusGenerator {
         strategyConfig.setRestControllerStyle(true);
         strategyConfig.setControllerMappingHyphenStyle(true);
         //表名
-        strategyConfig.setInclude("pms_product");
+        strategyConfig.setInclude("t_user_info");
         autoGenerator.setStrategy(strategyConfig);
         autoGenerator.setTemplateEngine(new FreemarkerTemplateEngine());
         autoGenerator.execute();

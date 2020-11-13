@@ -30,6 +30,7 @@
         <module>spring-redis</module>
         <module>spring-cache</module>
         <module>commons</module>
+        <module>spring-jta</module>
     </modules>
 
     <parent>
