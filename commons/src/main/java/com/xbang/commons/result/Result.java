@@ -51,4 +51,8 @@ public class Result {
         return new Result(ResultEnum.FAIL);
     }
 
+    public static Result fail(String message){
+        return new Result(ResultEnum.FAIL.getRetCode(),message);
+    }
+
 }

@@ -27,10 +27,10 @@
 
 
 
-        <!--<dependency>
+        <dependency>
             <groupId>com.xbang</groupId>
             <artifactId>commons</artifactId>
-        </dependency>-->
+        </dependency>
     </dependencies>
 
 </project>
