@@ -1,9 +1,9 @@
 package com.xbang.cache.controller;
 
 import com.xbang.cache.service.TestService;
-import com.xbang.commons.vo.result.BaseResult;
-import com.xbang.commons.vo.result.Result;
-import com.xbang.commons.vo.result.ResultEnum;
+import com.xbang.commons.result.BaseResult;
+import com.xbang.commons.result.Result;
+import com.xbang.commons.result.ResultEnum;
 import com.xbang.db.dao.entity.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,17 +23,17 @@ public class CacheTestController {
     TestService testService;
     @GetMapping("queryById")
     public Result queryById(long id){
-        return BaseResult.getResult(ResultEnum.RESULT_SUCCESS,testService.queryUserInfo(id));
+        return BaseResult.success(testService.queryUserInfo(id));
     }
 
     @GetMapping("queryByName")
     public Result queryByName(String name){
-        return BaseResult.getResult(ResultEnum.RESULT_SUCCESS,testService.queryUserInfoByName(name));
+        return BaseResult.getResult(ResultEnum.SUCCESS,testService.queryUserInfoByName(name));
     }
 
     @PostMapping("update")
     public Result update(@RequestBody UserInfo userInfo){
         testService.updateUserInfo(userInfo);
-        return BaseResult.getResult(ResultEnum.RESULT_SUCCESS);
+        return Result.success();
     }
 }

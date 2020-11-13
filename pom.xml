@@ -29,6 +29,7 @@
         <module>spring-quartz</module>
         <module>spring-redis</module>
         <module>spring-cache</module>
+        <module>commons</module>
     </modules>
 
     <parent>
@@ -57,12 +58,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>com.xbang</groupId>
-            <artifactId>commons</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -219,6 +214,12 @@
             <dependency>
                 <groupId>com.xbang</groupId>
                 <artifactId>spring-redis</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xbang</groupId>
+                <artifactId>commons</artifactId>
                 <version>1.0.0</version>
             </dependency>
 

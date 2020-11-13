@@ -27,6 +27,11 @@
             <artifactId>spring-redis</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.xbang</groupId>
+            <artifactId>commons</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
