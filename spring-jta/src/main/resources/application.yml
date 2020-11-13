@@ -1,3 +1,6 @@
 spring:
   profiles:
     active: db1,db2
+logging:
+  level:
+    com: debug

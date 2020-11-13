@@ -35,7 +35,7 @@ public class DataSourceConfig {
         //className
         atomikosDataSourceBean.setXaDataSourceClassName(DB_CLASS_NAME);
         atomikosDataSourceBean.setUniqueResourceName("db1");
-        atomikosDataSourceBean.setPoolSize(10);
+        atomikosDataSourceBean.setPoolSize(5);
         return atomikosDataSourceBean;
     }
 
@@ -52,7 +52,7 @@ public class DataSourceConfig {
         //className
         atomikosDataSourceBean.setXaDataSourceClassName(DB_CLASS_NAME);
         atomikosDataSourceBean.setUniqueResourceName("db2");
-        atomikosDataSourceBean.setPoolSize(10);
+        atomikosDataSourceBean.setPoolSize(5);
         return atomikosDataSourceBean;
     }
 

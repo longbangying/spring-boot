@@ -1,6 +1,6 @@
 spring:
   datasource:
-    db1:
+    db2:
       username: java_opr
       password: Soar18786611964!
       url: jdbc:mysql://47.104.171.254:3306/spring_quartz?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
