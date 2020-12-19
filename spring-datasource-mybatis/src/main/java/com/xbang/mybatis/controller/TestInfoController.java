@@ -1,8 +1,8 @@
 package com.xbang.mybatis.controller;
 
-import com.xbang.commons.vo.result.BaseResult;
-import com.xbang.commons.vo.result.Result;
-import com.xbang.commons.vo.result.ResultEnum;
+import com.xbang.commons.result.BaseResult;
+import com.xbang.commons.result.Result;
+import com.xbang.commons.result.ResultEnum;
 import com.xbang.mybatis.service.face.TestInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +16,11 @@ public class TestInfoController {
 
     @GetMapping("add")
     public Result addInfo(String name){
-        return BaseResult.getResult(ResultEnum.RESULT_SUCCESS,testInfoService.addInfo(name));
+        return BaseResult.getResult(ResultEnum.SUCCESS,testInfoService.addInfo(name));
     }
 
     @GetMapping("getInfo")
     public Result getInfo(long id){
-        return BaseResult.getResult(ResultEnum.RESULT_SUCCESS,testInfoService.getInfo(id));
+        return BaseResult.getResult(ResultEnum.FAIL,testInfoService.getInfo(id));
     }
 }

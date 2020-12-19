@@ -6,6 +6,7 @@ import com.xbang.mybatis.dao.mapper.TestInfoMapper;
 import com.xbang.mybatis.service.face.TestInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class TestInfoServiceImpl implements TestInfoService {
@@ -13,6 +14,7 @@ public class TestInfoServiceImpl implements TestInfoService {
     TestInfoMapper testInfoMapper;
 
     @Override
+    @Transactional
     public TTestInfo addInfo(String name) {
         TTestInfo tTestInfo = new TTestInfo();
         tTestInfo.setName(name);
