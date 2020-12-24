@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class KafkaConsumer {
-    @KafkaListener(topics = {"xbang"},groupId = "1")
+    @KafkaListener(topics = "xbang",groupId = "1")
     public void msgHandler(ConsumerRecord<String,String> record){
 
         System.out.println("收到:" + record.value());
