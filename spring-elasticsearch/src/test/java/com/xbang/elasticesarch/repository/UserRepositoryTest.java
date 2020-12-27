@@ -22,7 +22,7 @@ public class UserRepositoryTest {
         userEs.setId(1L);
         userEs.setUserName("张三");
         userEs.setUserPhone("110");
-        UserEs userEs1 = userRepository.save(userEs);
+        //UserEs userEs1 = userRepository.save(userEs);
 
     }
 

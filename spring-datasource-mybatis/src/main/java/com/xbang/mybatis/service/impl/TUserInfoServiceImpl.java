@@ -1,9 +1,9 @@
 package com.xbang.mybatis.service.impl;
 
 import com.baomidou.dynamic.datasource.annotation.DS;
-import com.xbang.commons.vo.result.BaseResult;
-import com.xbang.commons.vo.result.Result;
-import com.xbang.commons.vo.result.ResultEnum;
+import com.xbang.commons.result.BaseResult;
+import com.xbang.commons.result.Result;
+import com.xbang.commons.result.ResultEnum;
 import com.xbang.mybatis.dao.entity.TUserInfo;
 import com.xbang.mybatis.dao.mapper.TUserInfoMapper;
 import com.xbang.mybatis.service.face.ITUserInfoService;
@@ -28,13 +28,13 @@ public class TUserInfoServiceImpl extends ServiceImpl<TUserInfoMapper, TUserInfo
     @Override
     public Result addUser(TUserInfo tUserInfo) {
         boolean flag = this.save(tUserInfo);
-        return flag ? BaseResult.getResult(ResultEnum.RESULT_SUCCESS,"") : BaseResult.getResult(ResultEnum.RESULT_FAIL,"");
+        return flag ? BaseResult.getResult(ResultEnum.SUCCESS,"") : BaseResult.getResult(ResultEnum.FAIL,"");
     }
 
     @DS("slave")
     @Override
     public Result userPage() {
         List<TUserInfo> userInfoList = this.lambdaQuery().last("limit 50").list();
-        return BaseResult.getResult(ResultEnum.RESULT_SUCCESS, userInfoList);
+        return BaseResult.getResult(ResultEnum.SUCCESS, userInfoList);
     }
 }

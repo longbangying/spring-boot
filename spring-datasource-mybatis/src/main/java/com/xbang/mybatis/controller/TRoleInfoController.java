@@ -1,7 +1,7 @@
 package com.xbang.mybatis.controller;
 
 
-import com.xbang.commons.vo.result.Result;
+import com.xbang.commons.result.Result;
 import com.xbang.mybatis.dao.entity.TRoleInfo;
 import com.xbang.mybatis.service.face.ITRoleInfoService;
 import org.springframework.beans.factory.annotation.Autowired;

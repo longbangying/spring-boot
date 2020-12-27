@@ -14,15 +14,14 @@
         <module>spring-cache-demo</module>
         <module>spring-datasource-mybatis</module>
         <module>spring-elasticsearch</module>
-
         <module>dubbo-commons</module>
         <module>spring-mvc</module>
         <module>spring-rabbitmq</module>
-        <module>spring-mybatis</module>
         <module>spring-session</module>
         <module>spring-security</module>
         <module>spring-shiro</module>
         <module>multi-datasource</module>
+        <module>spring-mybatis</module>
         <module>spring-websocket</module>
         <module>boot-admin</module>
         <module>spring-db</module>
@@ -69,11 +68,6 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.xbang</groupId>
-            <artifactId>commons</artifactId>
-            <version>1.0.0</version>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -223,6 +217,12 @@
             <dependency>
                 <groupId>com.xbang</groupId>
                 <artifactId>spring-redis</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xbang</groupId>
+                <artifactId>multi-datasource</artifactId>
                 <version>1.0.0</version>
             </dependency>
 
