@@ -1,10 +1,9 @@
 package com.xbang.mybatis.service.face;
 
-import com.xbang.commons.vo.result.Result;
+import com.xbang.commons.result.Result;
 import com.xbang.mybatis.dao.entity.TRoleInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
-import javax.management.relation.RoleInfo;
 import java.util.List;
 
 /**

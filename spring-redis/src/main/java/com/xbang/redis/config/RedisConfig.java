@@ -15,11 +15,18 @@ import org.springframework.data.redis.core.StringRedisTemplate;
  */
 @Configuration
 public class RedisConfig {
+    private  String xxx;
 
     @Bean
     public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory redisConnectionFactory){
         StringRedisTemplate stringRedisTemplate = new StringRedisTemplate(redisConnectionFactory);
         return stringRedisTemplate;
     }
-
+    class xxx{
+        private String xxx111;
+        public String xx222;
+        public void test(){
+            String str = xxx;
+        }
+    }
 }

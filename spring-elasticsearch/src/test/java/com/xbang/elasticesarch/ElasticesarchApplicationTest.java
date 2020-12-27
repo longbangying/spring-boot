@@ -29,15 +29,15 @@ public class ElasticesarchApplicationTest {
 
     @Test
     public void testClient (){
-        try {
-            Request request = new Request("get","/");
+        /*try {
+            *//*Request request = new Request("get","/");
 //            request.addParameter("");
             Response response = restClient.performRequest(request);
             String result = EntityUtils.toString(response.getEntity());
-            System.out.println(result);
+            System.out.println(result);*//*
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 

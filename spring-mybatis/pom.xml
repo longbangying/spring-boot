@@ -47,7 +47,11 @@
         <dependency>
             <groupId>com.xbang</groupId>
             <artifactId>multi-datasource</artifactId>
-            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.xbang</groupId>
+            <artifactId>commons</artifactId>
         </dependency>
 
     </dependencies>

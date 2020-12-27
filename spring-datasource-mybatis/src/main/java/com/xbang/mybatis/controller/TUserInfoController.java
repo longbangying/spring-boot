@@ -1,7 +1,7 @@
 package com.xbang.mybatis.controller;
 
 
-import com.xbang.commons.vo.result.Result;
+import com.xbang.commons.result.Result;
 import com.xbang.mybatis.dao.entity.TUserInfo;
 import com.xbang.mybatis.service.face.ITUserInfoService;
 import lombok.extern.slf4j.Slf4j;

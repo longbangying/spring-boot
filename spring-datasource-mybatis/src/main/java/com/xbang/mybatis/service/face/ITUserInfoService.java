@@ -1,6 +1,6 @@
 package com.xbang.mybatis.service.face;
 
-import com.xbang.commons.vo.result.Result;
+import com.xbang.commons.result.Result;
 import com.xbang.mybatis.dao.entity.TUserInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 

@@ -1,14 +1,12 @@
 package com.xbang.mybatis.service.impl;
 
-import com.baomidou.mybatisplus.extension.service.additional.query.impl.LambdaQueryChainWrapper;
-import com.xbang.commons.vo.result.BaseResult;
-import com.xbang.commons.vo.result.Result;
-import com.xbang.commons.vo.result.ResultEnum;
+import com.xbang.commons.result.BaseResult;
+import com.xbang.commons.result.Result;
+import com.xbang.commons.result.ResultEnum;
 import com.xbang.mybatis.dao.entity.TRoleInfo;
 import com.xbang.mybatis.dao.mapper.TRoleInfoMapper;
 import com.xbang.mybatis.service.face.ITRoleInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,26 +27,26 @@ public class TRoleInfoServiceImpl extends ServiceImpl<TRoleInfoMapper, TRoleInfo
     @Override
     public Result addRoleInfo(TRoleInfo tRoleInfo) {
         if(null == tRoleInfo){
-            return BaseResult.getResult(ResultEnum.RESULT_FAIL,"参数错误");
+            return BaseResult.getResult(ResultEnum.FAIL,"参数错误");
         }
         checkArgs(tRoleInfo);
         boolean result = this.save(tRoleInfo);
         if (result) {
-            return BaseResult.getResult(ResultEnum.RESULT_SUCCESS, "");
+            return BaseResult.getResult(ResultEnum.SUCCESS, "");
         }
-        return BaseResult.getResult(ResultEnum.RESULT_FAIL,"");
+        return BaseResult.getResult(ResultEnum.FAIL,"");
     }
 
     @Override
     public Result queryRoleInfo(long roleId) {
         TRoleInfo tRoleInfo = this.getById(roleId);
 
-        return BaseResult.getResult(ResultEnum.RESULT_SUCCESS,tRoleInfo);
+        return BaseResult.getResult(ResultEnum.SUCCESS,tRoleInfo);
     }
 
     @Override
     public Result queryRoleInfoByPage(TRoleInfo tRoleInfo) {
-        return BaseResult.getResult(ResultEnum.RESULT_SUCCESS,queryRoleInfoList(tRoleInfo));
+        return BaseResult.getResult(ResultEnum.SUCCESS,queryRoleInfoList(tRoleInfo));
     }
 
 
