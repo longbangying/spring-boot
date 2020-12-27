@@ -22,16 +22,16 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
 
-@Slf4j
-@SpringBootTest
-@RunWith(SpringRunner.class)
+//@Slf4j
+//@SpringBootTest
+//@RunWith(SpringRunner.class)
 public class SpringCacheDemoApplicationTest {
 
-    @Autowired
+    /*@Autowired
     private StringRedisTemplate redisTemplate;
 
     //string test
-    @Test
+    //@Test
     public void test1(){
         String value = (String)redisTemplate.opsForValue().get("long");
         try {
@@ -58,7 +58,7 @@ public class SpringCacheDemoApplicationTest {
         return userInfo;
     }
 
-    @Test
+    //@Test
     public void testHash(){
         UserInfo userInfo = new UserInfo();
         userInfo.setAge(18);
@@ -109,7 +109,7 @@ public class SpringCacheDemoApplicationTest {
         System.out.println(beanToMap(userInfo));
     }
 
-
+*/
 
 
 
