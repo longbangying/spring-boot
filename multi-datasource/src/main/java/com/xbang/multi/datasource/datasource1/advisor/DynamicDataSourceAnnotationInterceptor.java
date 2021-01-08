@@ -1,7 +1,7 @@
-package com.xbang.multi.datasource.datasource.advisor;
+package com.xbang.multi.datasource.datasource1.advisor;
 
-import com.xbang.multi.datasource.annotation.support.DS;
-import com.xbang.multi.datasource.datasource.DataSourceHodler;
+import com.xbang.multi.datasource.datasource1.DataSourceHodler;
+import com.xbang.multi.datasource.support.annotation.DS;
 import lombok.extern.slf4j.Slf4j;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;

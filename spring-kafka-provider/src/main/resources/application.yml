@@ -6,5 +6,7 @@ spring:
     producer:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
       acks: 1
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
     consumer:
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer

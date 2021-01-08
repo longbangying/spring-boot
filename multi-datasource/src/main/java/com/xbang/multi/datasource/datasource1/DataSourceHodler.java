@@ -1,4 +1,4 @@
-package com.xbang.multi.datasource.datasource;
+package com.xbang.multi.datasource.datasource1;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -9,7 +9,7 @@ public class DataSourceHodler {
 
 
     public static void setDataSource(String dataSource){
-        log.info("datasource change to {}",dataSource);
+        log.info("datasource1 change to {}",dataSource);
         datasourceHodler.set(dataSource);
     }
 

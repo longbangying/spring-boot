@@ -1,13 +1,12 @@
 package com.xbang.multi.datasource.config;
 
-import com.xbang.multi.datasource.datasource.DataSourceCreator;
-import com.xbang.multi.datasource.datasource.DataSourceHodler;
-import com.xbang.multi.datasource.datasource.MyMultiDataSource;
-import com.xbang.multi.datasource.datasource.advisor.DynamicDataSourceAnnotationAdvisor;
+import com.xbang.multi.datasource.datasource1.DataSourceCreator;
+import com.xbang.multi.datasource.datasource1.DataSourceHodler;
+import com.xbang.multi.datasource.datasource1.MyMultiDataSource;
+import com.xbang.multi.datasource.datasource1.advisor.DynamicDataSourceAnnotationAdvisor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;

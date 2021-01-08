@@ -1,5 +1,6 @@
 package com.xbang.mybatis;
 
+import com.xbang.multi.datasource.config.MultiDataSourceProperty;
 import com.xbang.mybatis.entity.UserInfo;
 import com.xbang.mybatis.mapper.UserInfoMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -8,9 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @Slf4j
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.xbang"})
 @MapperScan("com.xbang.mybatis.mapper")
 public class MybatisApplication implements CommandLineRunner {
 
@@ -18,7 +20,9 @@ public class MybatisApplication implements CommandLineRunner {
     UserInfoMapper userInfoMapper;
 
     public static void main(String[] args) {
-        SpringApplication.run(MybatisApplication.class,args);
+        ApplicationContext applicationContext = SpringApplication.run(MybatisApplication.class,args);
+        MultiDataSourceProperty multiDataSourceProperty = applicationContext.getBean(MultiDataSourceProperty.class);
+        System.out.println(multiDataSourceProperty);
     }
 
     @Override

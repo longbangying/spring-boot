@@ -20,5 +20,10 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.xbang</groupId>
+            <artifactId>commons</artifactId>
+        </dependency>
     </dependencies>
 </project>

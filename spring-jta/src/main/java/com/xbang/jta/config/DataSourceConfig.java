@@ -29,7 +29,7 @@ public class DataSourceConfig {
      */
     @Bean
     public DataSource dataSource1(Environment environment){
-        Properties properties = build(environment,"spring.datasource.db1");
+        Properties properties = build(environment,"spring.datasource1.db1");
         AtomikosDataSourceBean atomikosDataSourceBean = new AtomikosDataSourceBean();
         atomikosDataSourceBean.setXaProperties(properties);
         //className
@@ -46,7 +46,7 @@ public class DataSourceConfig {
      */
     @Bean
     public DataSource dataSource2(Environment environment){
-        Properties properties = build(environment,"spring.datasource.db2");
+        Properties properties = build(environment,"spring.datasource1.db2");
         AtomikosDataSourceBean atomikosDataSourceBean = new AtomikosDataSourceBean();
         atomikosDataSourceBean.setXaProperties(properties);
         //className

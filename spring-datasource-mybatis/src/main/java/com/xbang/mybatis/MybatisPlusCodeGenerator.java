@@ -17,7 +17,7 @@ public class MybatisPlusCodeGenerator {
         GlobalConfig globalConfig = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         //设置输出路径
-        globalConfig.setOutputDir(projectPath + "/spring-datasource-mybatis/src/main/java").setAuthor("xbang").setOpen(false);
+        globalConfig.setOutputDir(projectPath + "/spring-datasource1-mybatis/src/main/java").setAuthor("xbang").setOpen(false);
         globalConfig.setFileOverride(true);
 
         globalConfig.setBaseResultMap(true);

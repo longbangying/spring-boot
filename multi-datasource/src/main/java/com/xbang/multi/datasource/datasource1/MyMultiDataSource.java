@@ -1,4 +1,4 @@
-package com.xbang.multi.datasource.datasource;
+package com.xbang.multi.datasource.datasource1;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 

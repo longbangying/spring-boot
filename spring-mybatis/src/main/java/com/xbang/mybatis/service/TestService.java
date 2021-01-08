@@ -1,6 +1,6 @@
 package com.xbang.mybatis.service;
 
-import com.xbang.multi.datasource.annotation.support.DS;
+import com.xbang.multi.datasource.support.annotation.DS;
 import com.xbang.mybatis.entity.UserInfo;
 import com.xbang.mybatis.mapper.UserInfoMapper;
 import org.springframework.beans.factory.annotation.Autowired;

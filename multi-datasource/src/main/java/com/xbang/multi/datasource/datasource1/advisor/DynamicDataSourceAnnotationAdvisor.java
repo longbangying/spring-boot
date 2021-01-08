@@ -1,6 +1,6 @@
-package com.xbang.multi.datasource.datasource.advisor;
+package com.xbang.multi.datasource.datasource1.advisor;
 
-import com.xbang.multi.datasource.annotation.support.DS;
+import com.xbang.multi.datasource.support.annotation.DS;
 import lombok.extern.slf4j.Slf4j;
 import org.aopalliance.aop.Advice;
 import org.springframework.aop.Pointcut;
@@ -10,7 +10,7 @@ import org.springframework.aop.support.annotation.AnnotationMatchingPointcut;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.stereotype.Component;
+
 @Slf4j
 //@Component
 public class DynamicDataSourceAnnotationAdvisor extends AbstractPointcutAdvisor implements BeanFactoryAware {

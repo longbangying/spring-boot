@@ -1,4 +1,4 @@
-package com.xbang.multi.datasource.datasource;
+package com.xbang.multi.datasource.datasource1;
 
 import com.xbang.multi.datasource.config.DataSourceProperty;
 import com.zaxxer.hikari.HikariConfig;

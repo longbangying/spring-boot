@@ -1,10 +1,8 @@
 package com.xbang.multi.datasource.annotation.support;
 
-import com.xbang.multi.datasource.datasource.DataSourceHodler;
+import com.xbang.multi.datasource.datasource1.DataSourceHodler;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 //表明这是一个切面类
@@ -19,7 +17,7 @@ public class DataSourceSupport {
      * @return
      * @throws Throwable
      */
-    @Around("@annotation(com.xbang.multi.datasource.annotation.support.DS)")
+    @Around("@annotation(com.xbang.multi.datasource1.annotation.support.DS)")
     public Object support(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
         String methodName = proceedingJoinPoint.getStaticPart().getSignature().getName();
         Class clazz = proceedingJoinPoint.getTarget().getClass();
