@@ -91,7 +91,7 @@
                 <version>2.7.0</version>
             </dependency>
 
-            <!--mybatis-plus 相关-->
+            <!--mybatis-plus 相关测试-->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
