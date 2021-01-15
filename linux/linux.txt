@@ -7,7 +7,7 @@ Centos 完全卸载Mysql
     rpm -qa |grep -i mysql
 
 
-4.这是master加的东西
+4.这是master加的东西。。。。。。。。。。。。
 
 
 
