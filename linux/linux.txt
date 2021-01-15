@@ -5,3 +5,8 @@ Centos 完全卸载Mysql
     yum remove xxxx
 3.查看卸载效果
     rpm -qa |grep -i mysql
+
+
+
+
+5.这是dev加的
