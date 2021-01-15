@@ -1,0 +1,10 @@
+Failed to execute goal on project commons: Could not resolve dependencies for project com.xbang:commons:jar:1.0.0: Failure to find com.xbang:commons:jar:1.0.0 in http://maven.aliyun.co
+m/nexus/content/groups/public/ was cached in the local repository, resolution will not be reattempted until the update interval of alimaven has elapsed or updates are forced -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal on project commons: Could not resolve dependencies for project com.xbang:commons:jar:1.0.0: Failure to find com.x
+bang:commons:jar:1.0.0 in http://maven.aliyun.com/nexus/content/groups/public/ was cached in the local repository, resolution will not be reattempted until the update interval of alimaven has
+elapsed or updates are forced
+
+
+mvn install:install-file -Dfile=/Users/wangwangrong/pro365/lib/youtu-java-sdk.jar -DgroupId=com.youtu -DartifactId=youtu-java-sdk -Dversion=1.0.0 -Dpackaging=jar
+
+
