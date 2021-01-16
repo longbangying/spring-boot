@@ -32,6 +32,7 @@
         <module>spring-jta</module>
         <module>spring-aop</module>
         <module>spring-kafka-provider</module>
+        <module>spring-postgresql</module>
     </modules>
 
     <parent>
