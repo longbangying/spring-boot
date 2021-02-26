@@ -1,6 +1,7 @@
 package com.xbang.postgresql.dao;
 
 
+import com.xbang.postgresql.entity.UserInfo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ public class UserInfoMapperTest {
 
     @Test
     public void test(){
-        List<Map> list = userInfoMapper.getAll();
+        List<UserInfo> list = userInfoMapper.selectAll();
         if(null != list){
             list.stream().forEach(System.out::println);
         }

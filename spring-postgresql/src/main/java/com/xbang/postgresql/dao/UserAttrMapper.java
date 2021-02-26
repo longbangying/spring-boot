@@ -1,8 +1,5 @@
 package com.xbang.postgresql.dao;
 
-import com.xbang.postgresql.entity.UserInfo;
-
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -13,10 +10,6 @@ import java.util.Map;
  * create date: 2021/1/16
  * update date: 2021/1/16
  */
-public interface UserInfoMapper {
-    List<Map> getAll();
-
+public interface UserAttrMapper {
     int insert(Map map);
-
-    List<UserInfo> selectAll();
 }

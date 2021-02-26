@@ -7,7 +7,11 @@
     </select>
 
     <insert id="insert" parameterType="java.util.Map">
-        insert into t_user_info values (#{id},#{name},#{address})
+        insert into t_user_info values (#{id},#{name},#{address},#{remark},#{note})
     </insert>
+
+    <select id="selectAll" resultType="com.xbang.postgresql.entity.UserInfo">
+        select * from t_user_info limit 10
+    </select>
 
 </mapper>
